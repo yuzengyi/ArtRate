@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AACSA</title>
+</head>
+<body>
+    <h1>AI-Driven Assessment of Creativity in Students' Artworks</h1>
+    <!-- Resize image using inline CSS -->
+    <img src="data:image/png;base64,{{ image_data }}" alt="Uploaded Image" style="max-width: 40%; height: auto;">
+    <h2>Zero-Shot</h2>
+    <p>{{zero_result}}</p>
+    <img src="data:image/png;base64,{{ radar_chart }}" alt="Radar Chart" style="max-width: 40%; height: auto;">
+    <h2>One-Shot</h2>
+    <p>{{one_result}}</p>
+    <img src="data:image/png;base64,{{ one_radar_chart }}" alt="One Radar Chart" style="max-width: 40%; height: auto;">
+    <h2>Few-Shot</h2>
+    <p>{{three_response}}</p>
+    <img src="data:image/png;base64,{{ three_radar_chart }}" alt="Three Radar Chart" style="max-width: 40%; height: auto;">
+    <a href="{{ url_for('upload_file') }}">Upload another image</a>
+</body>
+</html>
